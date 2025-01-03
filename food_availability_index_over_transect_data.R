@@ -1,8 +1,10 @@
-#' Author: John Smith
+#' title: Food Index on Transect Data
 #' Version: 2.1.0
-#' Description: This script analyzes financial time series data.
+#' Description: This scripts performs the computation and vizualization of the food availability data over the vegetation records (transect data) for all the home ranges of the monkey species
 #' Date: 2025-01-02
-
+#
+#
+#
 
 
 #
