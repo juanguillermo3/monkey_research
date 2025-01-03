@@ -1,10 +1,8 @@
-#
-#
-#
-#
-#
-#
-#
+#' Author: John Smith
+#' Version: 2.1.0
+#' Description: This script analyzes financial time series data.
+#' Date: 2025-01-02
+
 
 
 #
