@@ -1,11 +1,10 @@
 #'
-#' title: Food Index on Transect Data
+#' title: Food Index over Transect Data
+#' description: This scripts performs the computation and vizualization of the food availability data over the vegetation records (transect data) for all the home ranges of the monkey species
+#' portfolio: True
+#' project: monkey_research
 #' Version: 2.1.0
-#' Description: This scripts performs the computation and vizualization of the food availability data over the vegetation records (transect data) for all the home ranges of the monkey species
 #' Date: 2025-01-02
-#' Project: monkey_research
-#' Portfolio': True
-#'
 
 #
 # 0.0 research questions
