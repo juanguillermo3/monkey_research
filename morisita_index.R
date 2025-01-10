@@ -3,8 +3,8 @@
 #' description: Computes the Morisita Index for spatial dispersion for the home range of each monkey species
 #' portfolio: True
 #' project: monkey_research
-#' Version: 1.0
-
+#' Version: 2.1.0
+#' Date: 2025-01-02
 
 
 #
