@@ -1,6 +1,6 @@
-#' Title: Generate Comprehensive Excel Reports
-#' Description: A flexible function to create Excel reports with dataframes, ggplots, leaflet maps, and nested lists of content.
-#' Report URL: Generates structured Excel reports with support for mixed content types.
+#' title: Generate Comprehensive Excel Reports
+#' description: A flexible function to create Excel reports with dataframes, ggplots, leaflet maps, and nested lists of content.
+#' report_url: Generates structured Excel reports with support for mixed content types.
 
 
 library(openxlsx)
