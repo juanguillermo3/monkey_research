@@ -2,6 +2,7 @@
 #' title: Home range sizes trough CPE
 #' description: Implements a the Minimum Convex Polygon Estimator to compute the home range sizes for each of 4 monkey groups under study
 #' report_url: https://docs.google.com/spreadsheets/d/1Dr48Q6WI18ldeaSUnL_C2OpaVQPiSNGv/edit?gid=1820260740#gid=1820260740
+#' galleria: True
 #' image_path: assets/home_ranges.png
 
 #
