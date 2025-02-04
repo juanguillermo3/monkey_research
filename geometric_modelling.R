@@ -3,7 +3,7 @@
 #' description: Applies Geometric Modelling based on dimensionality reduction to analize nutritional preferences of the monkey species.
 #' debrief: This module performs a visualization devide to facilitate the analisis of
 #'          the main nutritional profiles for the monkey groups under study.
-#' image_path: gm_per_group.png
+#' image_path: assets/gm_per_group.png
 #'
 
 #
