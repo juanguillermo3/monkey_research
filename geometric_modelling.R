@@ -3,7 +3,7 @@
 #' description: Applies Geometric Modelling based on dimensionality reduction to analize nutritional preferences of the monkey species.
 #' debrief: This module performs a visualization devide to facilitate the analisis of
 #'          the main nutritional profiles for the monkey groups under study.
-#' image_path: assets/gm_per_group.png
+#' image_path: gm_per_group.png
 #'
 
 #
@@ -80,7 +80,10 @@ NUTRITIONAL_PARAMETERS = c(
   "ash"                      # Total ash content
 )
 
-
+# Assuming the global configuration defines the size and resolution for publication
+pub_width <- 7  # Width in inches
+pub_height <- 5  # Height in inches
+pub_dpi <- 300  # Resolution in DPI
 
 #
 # 1. Exploratory query on the table of nutritional values: The main data assets for
@@ -617,3 +620,57 @@ plot_nutritional_analysis_by_group(
 #
 
 
+
+setwd(NUTRITION_HOME)
+
+# (1) Plot for monkey_group
+plot1 <- plot_nutritional_analysis_by_group(
+  db_con, 
+  query_for_nutrition_table = "SELECT * FROM only_std_nutr_val_at_spec", 
+  query_for_intakes_table = "
+                             SELECT monkey_group, sex, species, reproductive_state, month as year_month
+                             FROM species_cons_view
+                            ", 
+  group = "monkey_group", 
+  replicating_at = "year_month"
+)
+ggsave("gm_per_monkey_group.png", plot = plot1, width = pub_width, height = pub_height, dpi = pub_dpi)
+
+# (2) Plot for sex
+plot2 <- plot_nutritional_analysis_by_group(
+  db_con, 
+  query_for_nutrition_table = "SELECT * FROM only_std_nutr_val_at_spec", 
+  query_for_intakes_table = "
+                             SELECT monkey_group, sex, species, reproductive_state, month as year_month
+                             FROM species_cons_view
+                            ", 
+  group = "sex", 
+  replicating_at = "year_month"
+)
+ggsave("gm_per_sex.png", plot = plot2, width = pub_width, height = pub_height, dpi = pub_dpi)
+
+# (3) Plot for reproductive_state
+plot3 <- plot_nutritional_analysis_by_group(
+  db_con, 
+  query_for_nutrition_table = "SELECT * FROM only_std_nutr_val_at_spec", 
+  query_for_intakes_table = "
+                             SELECT monkey_group, sex, species, reproductive_state, month as year_month
+                             FROM species_cons_view
+                            ", 
+  group = "reproductive_state", 
+  replicating_at = "year_month"
+)
+ggsave("gm_per_reproductive_state.png", plot = plot3, width = pub_width, height = pub_height, dpi = pub_dpi)
+
+# (4) Plot for plant_part (using a different source table for event data)
+plot4 <- plot_nutritional_analysis_by_group(
+  db_con, 
+  query_for_nutrition_table = "SELECT * FROM only_std_nutr_val_at_spec", 
+  query_for_intakes_table = "
+                             SELECT plant_part, species, month as year_month
+                             FROM parts_cons_view
+                            ", 
+  group = "plant_part", 
+  replicating_at = "year_month"
+)
+ggsave("gm_per_plant_part.png", plot = plot4, width = pub_width, height = pub_height, dpi = pub_dpi)
