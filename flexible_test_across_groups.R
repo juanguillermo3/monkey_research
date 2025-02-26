@@ -1,7 +1,5 @@
-#' title: Flexible Comparison Across Groups
-#' description: Performs statistical tests to compare measurements of a dependent variable across groups defined by an independent variable. Supports multiple behaviors for ecological studies.
-
-
+#' Title: Flexible Comparison Across Groups
+#' Description: Performs statistical tests to compare measurements of a dependent variable across groups defined by an independent variable. Supports multiple behaviors for ecological studies.
 
 library(dplyr)
 library(purrr)
